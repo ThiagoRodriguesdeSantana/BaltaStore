@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
+      "FluentValidator/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/FluentValidator.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/FluentValidator.dll": {}
+        }
+      },
       "Microsoft.CodeCoverage/1.0.3": {
         "type": "package",
         "compile": {
@@ -1611,10 +1623,33 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
+      },
+      "BaltaStore.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "FluentValidator": "2.0.2"
+        },
+        "compile": {
+          "bin/placeholder/BaltaStore.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BaltaStore.Domain.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "FluentValidator/2.0.2": {
+      "sha512": "+jPy82KgA80/SjmesLUCQsBB+GWbffGYMeGUMizLWc87hQkBPnyrysfoa/Hiq0QciGEeFD1PokPwLafnNDnQ/Q==",
+      "type": "package",
+      "path": "fluentvalidator/2.0.2",
+      "files": [
+        "fluentvalidator.2.0.2.nupkg.sha512",
+        "fluentvalidator.nuspec",
+        "lib/netstandard1.3/FluentValidator.dll"
+      ]
+    },
     "Microsoft.CodeCoverage/1.0.3": {
       "sha512": "5KfX12XPfvBomjrZv9nCBfQ6lhZdroVxXvGnY6MqzG83bjqdq6SQ3xxJFdPgHv6oli83M9oNhZlynYehjmboUg==",
       "type": "package",
@@ -5683,10 +5718,16 @@
         "system.xml.xpath.xmldocument.4.0.1.nupkg.sha512",
         "system.xml.xpath.xmldocument.nuspec"
       ]
+    },
+    "BaltaStore.Domain/1.0.0": {
+      "type": "project",
+      "path": "../BaltaStore.Domain/BaltaStore.Domain.csproj",
+      "msbuildProject": "../BaltaStore.Domain/BaltaStore.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
+      "BaltaStore.Domain >= 1.0.0",
       "MSTest.TestAdapter >= 1.2.0",
       "MSTest.TestFramework >= 1.2.0",
       "Microsoft.NET.Test.Sdk >= 15.5.0",
@@ -5700,6 +5741,9 @@
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
       "projectUniqueName": "C:\\Users\\Thiago\\dev\\BaltaStore\\BaltaStore.Tests\\BaltaStore.Tests.csproj",
       "projectName": "BaltaStore.Tests",
@@ -5725,7 +5769,11 @@
       },
       "frameworks": {
         "netcoreapp2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Thiago\\dev\\BaltaStore\\BaltaStore.Domain\\BaltaStore.Domain.csproj": {
+              "projectPath": "C:\\Users\\Thiago\\dev\\BaltaStore\\BaltaStore.Domain\\BaltaStore.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -5750,7 +5798,6 @@
             "version": "[15.5.0, )"
           },
           "Microsoft.NETCore.App": {
-            "suppressParent": "All",
             "target": "Package",
             "version": "[2.0.0, )",
             "autoReferenced": true

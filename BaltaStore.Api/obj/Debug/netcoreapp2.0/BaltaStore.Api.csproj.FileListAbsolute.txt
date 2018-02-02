@@ -8,3 +8,4 @@ C:\Users\Thiago\dev\BaltaStore\BaltaStore.Api\obj\Debug\netcoreapp2.0\BaltaStore
 C:\Users\Thiago\dev\BaltaStore\BaltaStore.Api\obj\Debug\netcoreapp2.0\BaltaStore.Api.AssemblyInfo.cs
 C:\Users\Thiago\dev\BaltaStore\BaltaStore.Api\obj\Debug\netcoreapp2.0\BaltaStore.Api.dll
 C:\Users\Thiago\dev\BaltaStore\BaltaStore.Api\obj\Debug\netcoreapp2.0\BaltaStore.Api.pdb
+C:\Users\Thiago\dev\BaltaStore\BaltaStore.Api\obj\Debug\netcoreapp2.0\BaltaStore.Api.csprojResolveAssemblyReference.cache

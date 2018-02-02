@@ -12541,6 +12541,9 @@
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
       "projectUniqueName": "C:\\Users\\Thiago\\dev\\BaltaStore\\BaltaStore.Api\\BaltaStore.Api.csproj",
       "projectName": "BaltaStore.Api",

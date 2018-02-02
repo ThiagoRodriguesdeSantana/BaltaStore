@@ -1,19 +1,22 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using BaltaStore.Domain.StoreContext.ValueObjects;
+using FluentValidator;
 
 namespace BaltaStore.Domain.StoreContext.Entities
 {
-    public class Customer
+    public class Customer : Notifiable
     {
+        private IList<Adress> _Adress;
         public Customer(Name name, Document document, Email email, string phone)
         {
             Name = name;
             Document = document;
             Email = email;
             Phone = phone;
-            Adress = new List<Adress>();
+            _Adress = new List<Adress>();
         }
 
         public Name Name { get; private set; }
@@ -24,7 +27,12 @@ namespace BaltaStore.Domain.StoreContext.Entities
 
         public override string ToString() => this.Name.ToString();
 
-      
+        public IReadOnlyCollection<Adress> GetAdress() => _Adress.ToArray();
+        public void AddAdress(Adress adress)
+        {
+            _Adress.Add(adress);
+        }
+
     }
 
 }
