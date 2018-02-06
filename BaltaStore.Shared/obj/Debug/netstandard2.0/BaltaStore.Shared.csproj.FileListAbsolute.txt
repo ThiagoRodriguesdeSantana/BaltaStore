@@ -6,3 +6,4 @@ C:\Users\Thiago\dev\BaltaStore\BaltaStore.Shared\obj\Debug\netstandard2.0\BaltaS
 C:\Users\Thiago\dev\BaltaStore\BaltaStore.Shared\obj\Debug\netstandard2.0\BaltaStore.Shared.AssemblyInfo.cs
 C:\Users\Thiago\dev\BaltaStore\BaltaStore.Shared\obj\Debug\netstandard2.0\BaltaStore.Shared.dll
 C:\Users\Thiago\dev\BaltaStore\BaltaStore.Shared\obj\Debug\netstandard2.0\BaltaStore.Shared.pdb
+C:\Users\Thiago\dev\BaltaStore\BaltaStore.Shared\obj\Debug\netstandard2.0\BaltaStore.Shared.csprojResolveAssemblyReference.cache
