@@ -4,7 +4,12 @@ using System.Text;
 
 namespace BaltaStore.Domain.StoreContext.Commands.CustomerCommand.Input
 {
-    class CreateCustomerCommand
+    public class CreateCustomerCommand
     {
+        public string FirstName { get; set; }
+        public string LestName { get; set; }
+        public string Document { get; set; }
+        public string Email { get; set; }
+        public string Phone { get; set; }
     }
 }
