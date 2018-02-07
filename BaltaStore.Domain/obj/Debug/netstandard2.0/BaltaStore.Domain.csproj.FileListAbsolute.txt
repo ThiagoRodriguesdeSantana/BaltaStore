@@ -7,3 +7,7 @@ C:\Users\Thiago\dev\BaltaStore\BaltaStore.Domain\obj\Debug\netstandard2.0\BaltaS
 C:\Users\Thiago\dev\BaltaStore\BaltaStore.Domain\obj\Debug\netstandard2.0\BaltaStore.Domain.dll
 C:\Users\Thiago\dev\BaltaStore\BaltaStore.Domain\obj\Debug\netstandard2.0\BaltaStore.Domain.pdb
 C:\Users\Thiago\dev\BaltaStore\BaltaStore.Domain\obj\Debug\netstandard2.0\BaltaStore.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Thiago\dev\BaltaStore\BaltaStore.Domain\bin\Debug\netstandard2.0\BaltaStore.Infra.dll
+C:\Users\Thiago\dev\BaltaStore\BaltaStore.Domain\bin\Debug\netstandard2.0\BaltaStore.Shared.dll
+C:\Users\Thiago\dev\BaltaStore\BaltaStore.Domain\bin\Debug\netstandard2.0\BaltaStore.Infra.pdb
+C:\Users\Thiago\dev\BaltaStore\BaltaStore.Domain\bin\Debug\netstandard2.0\BaltaStore.Shared.pdb

@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BaltaStore.Domain.StoreContext.Commands.CustomerCommand
+namespace BaltaStore.Domain.StoreContext.Commands.CustomerCommand.Input
 {
     public class AddAdressCommand
     {

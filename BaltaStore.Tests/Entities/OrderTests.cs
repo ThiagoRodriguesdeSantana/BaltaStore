@@ -110,5 +110,18 @@ namespace BaltaStore.Tests
         private const string MONITOR = "monitor";
 
 
+        public void CreatCustomer()
+        {
+            //Verificar se cpf ja exist
+            //Verificar se email ja existe
+            //Criar os VO's
+            //Criar a Entidade
+            //Validar as entidades e VO
+            //Inserir o cliente do banco
+            //Envia convite do Slack
+            //Envia um e-mail de boas vindas 
+
+        }
+
     }
 }
