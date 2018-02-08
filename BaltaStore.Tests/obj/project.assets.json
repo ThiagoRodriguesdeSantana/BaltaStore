@@ -1628,6 +1628,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "BaltaStore.Infra": "1.0.0",
           "BaltaStore.Shared": "1.0.0",
           "FluentValidator": "2.0.2"
         },
@@ -1638,9 +1639,22 @@
           "bin/placeholder/BaltaStore.Domain.dll": {}
         }
       },
+      "BaltaStore.Infra/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/BaltaStore.Infra.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BaltaStore.Infra.dll": {}
+        }
+      },
       "BaltaStore.Shared/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "FluentValidator": "2.0.2"
+        },
         "compile": {
           "bin/placeholder/BaltaStore.Shared.dll": {}
         },
@@ -5734,6 +5748,11 @@
       "type": "project",
       "path": "../BaltaStore.Domain/BaltaStore.Domain.csproj",
       "msbuildProject": "../BaltaStore.Domain/BaltaStore.Domain.csproj"
+    },
+    "BaltaStore.Infra/1.0.0": {
+      "type": "project",
+      "path": "../BaltaStore.Infra/BaltaStore.Infra.csproj",
+      "msbuildProject": "../BaltaStore.Infra/BaltaStore.Infra.csproj"
     },
     "BaltaStore.Shared/1.0.0": {
       "type": "project",
