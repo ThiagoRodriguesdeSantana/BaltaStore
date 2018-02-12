@@ -9,7 +9,7 @@ namespace BaltaStore.Tests.Fakes
     {
         public void Send(string to, string from, string subject, string boby)
         {
-            throw new NotImplementedException();
+       
         }
     }
 }

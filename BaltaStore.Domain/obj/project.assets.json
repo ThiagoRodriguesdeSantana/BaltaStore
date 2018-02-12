@@ -38,16 +38,6 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "BaltaStore.Infra/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "compile": {
-          "bin/placeholder/BaltaStore.Infra.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/BaltaStore.Infra.dll": {}
-        }
-      },
       "BaltaStore.Shared/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -215,11 +205,6 @@
         "lib/netstandard1.0/_._"
       ]
     },
-    "BaltaStore.Infra/1.0.0": {
-      "type": "project",
-      "path": "../BaltaStore.Infra/BaltaStore.Infra.csproj",
-      "msbuildProject": "../BaltaStore.Infra/BaltaStore.Infra.csproj"
-    },
     "BaltaStore.Shared/1.0.0": {
       "type": "project",
       "path": "../BaltaStore.Shared/BaltaStore.Shared.csproj",
@@ -228,7 +213,6 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "BaltaStore.Infra >= 1.0.0",
       "BaltaStore.Shared >= 1.0.0",
       "FluentValidator >= 2.0.2",
       "NETStandard.Library >= 2.0.1"
@@ -272,9 +256,6 @@
           "projectReferences": {
             "C:\\Users\\Thiago\\dev\\BaltaStore\\BaltaStore.Shared\\BaltaStore.Shared.csproj": {
               "projectPath": "C:\\Users\\Thiago\\dev\\BaltaStore\\BaltaStore.Shared\\BaltaStore.Shared.csproj"
-            },
-            "C:\\Users\\Thiago\\dev\\BaltaStore\\BaltaStore.Infra\\BaltaStore.Infra.csproj": {
-              "projectPath": "C:\\Users\\Thiago\\dev\\BaltaStore\\BaltaStore.Infra\\BaltaStore.Infra.csproj"
             }
           }
         }

@@ -1,9 +1,6 @@
 ﻿using BaltaStore.Shared.Commands;
 using FluentValidator;
 using FluentValidator.Validation;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace BaltaStore.Domain.StoreContext.Commands.CustomerCommand.Input
 {

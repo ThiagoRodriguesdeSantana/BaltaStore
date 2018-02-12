@@ -1,0 +1,11 @@
+C:\Users\Thiago\dev\BaltaStore\BaltaStore.Domain\bin\Debug\netstandard2.0\BaltaStore.Domain.deps.json
+C:\Users\Thiago\dev\BaltaStore\BaltaStore.Domain\bin\Debug\netstandard2.0\BaltaStore.Domain.dll
+C:\Users\Thiago\dev\BaltaStore\BaltaStore.Domain\bin\Debug\netstandard2.0\BaltaStore.Domain.pdb
+C:\Users\Thiago\dev\BaltaStore\BaltaStore.Domain\bin\Debug\netstandard2.0\BaltaStore.Shared.dll
+C:\Users\Thiago\dev\BaltaStore\BaltaStore.Domain\bin\Debug\netstandard2.0\BaltaStore.Shared.pdb
+C:\Users\Thiago\dev\BaltaStore\BaltaStore.Domain\obj\Debug\netstandard2.0\BaltaStore.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Thiago\dev\BaltaStore\BaltaStore.Domain\obj\Debug\netstandard2.0\BaltaStore.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Thiago\dev\BaltaStore\BaltaStore.Domain\obj\Debug\netstandard2.0\BaltaStore.Domain.AssemblyInfoInputs.cache
+C:\Users\Thiago\dev\BaltaStore\BaltaStore.Domain\obj\Debug\netstandard2.0\BaltaStore.Domain.AssemblyInfo.cs
+C:\Users\Thiago\dev\BaltaStore\BaltaStore.Domain\obj\Debug\netstandard2.0\BaltaStore.Domain.dll
+C:\Users\Thiago\dev\BaltaStore\BaltaStore.Domain\obj\Debug\netstandard2.0\BaltaStore.Domain.pdb

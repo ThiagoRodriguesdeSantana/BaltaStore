@@ -9,7 +9,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BaltaStore.Infra\BaltaStore.Infra.csproj" />
     <ProjectReference Include="..\BaltaStore.Shared\BaltaStore.Shared.csproj" />
   </ItemGroup>
 

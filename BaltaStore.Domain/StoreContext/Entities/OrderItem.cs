@@ -1,6 +1,5 @@
 using BaltaStore.Shared.Entities;
-using FluentValidator;
-using System;
+
 
 namespace BaltaStore.Domain.StoreContext.Entities
 {
