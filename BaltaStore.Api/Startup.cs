@@ -15,6 +15,8 @@ namespace BaltaStore.Api
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            //apos adicionar o pacote MVC
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -29,6 +31,9 @@ namespace BaltaStore.Api
             //{
             //    await context.Response.WriteAsync("Hello World!");
             //});
+
+            //Usar o pacote MVC
+            app.UseMvc();
         }
     }
 }
