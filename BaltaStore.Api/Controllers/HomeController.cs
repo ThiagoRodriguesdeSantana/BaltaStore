@@ -13,7 +13,7 @@ namespace BaltaStore.Api.Controllers
         }
 
         [HttpGet]
-        [Route("")]
+        [Route("erro")]
         public string Error()
         {
             throw new System.Exception("Houve algum erro");
