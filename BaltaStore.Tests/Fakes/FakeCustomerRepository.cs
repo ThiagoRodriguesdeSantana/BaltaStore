@@ -1,4 +1,5 @@
 ﻿using BaltaStore.Domain.StoreContext.Entities;
+using BaltaStore.Domain.StoreContext.Queries;
 using BaltaStore.Domain.StoreContext.Repositories;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,21 @@ namespace BaltaStore.Tests.Fakes
         public bool CheckEmail(string email)
         {
             return false;
+        }
+
+        public IEnumerable<ListCustomerQueryResult> Get()
+        {
+            throw new NotImplementedException();
+        }
+
+        public GetCustomerQueryResult Get(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<ListCutomerOrderQueryResult> GetOrder(Guid id)
+        {
+            throw new NotImplementedException();
         }
 
         public void Save(Customer customer)

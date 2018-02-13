@@ -1,4 +1,7 @@
-﻿using BaltaStore.Domain.StoreContext.Entities;
+﻿using System;
+using System.Collections.Generic;
+using BaltaStore.Domain.StoreContext.Entities;
+using BaltaStore.Domain.StoreContext.Queries;
 
 namespace BaltaStore.Domain.StoreContext.Repositories
 {
@@ -9,5 +12,12 @@ namespace BaltaStore.Domain.StoreContext.Repositories
         bool CheckEmail(string email);
 
         void Save(Customer customer);
+
+        IEnumerable<ListCustomerQueryResult> Get();
+
+        GetCustomerQueryResult Get(Guid id);
+
+        IEnumerable<ListCutomerOrderQueryResult> GetOrder(Guid id);
+
     }
 }

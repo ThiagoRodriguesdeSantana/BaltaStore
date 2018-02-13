@@ -4,6 +4,9 @@ using System.Linq;
 using Dapper;
 using BaltaStore.Domain.StoreContext.Repositories;
 using BaltaStore.Domain.StoreContext.Entities;
+using BaltaStore.Domain.StoreContext.Queries;
+using System.Collections.Generic;
+using System;
 
 namespace BaltaStore.Infra.StoreContext.Repositories
 {
@@ -33,6 +36,28 @@ namespace BaltaStore.Infra.StoreContext.Repositories
                new { Email = email },
                commandType: CommandType.StoredProcedure)
                .FirstOrDefault();
+        }
+
+        public IEnumerable<ListCustomerQueryResult> Get()
+        {
+             return _context.Connection.Query<ListCustomerQueryResult>(
+               "SELECT [Id],CONCAT([FIRSTNAME],' ',[LASTNAME]) AS [NAME], [DOCUMENT], [EMAIL] FROM [CUSTOMER]");
+        }
+
+        public GetCustomerQueryResult Get(Guid id)
+        {
+            return _context.Connection.Query<GetCustomerQueryResult>(
+               "SELECT [Id],CONCAT([FIRSTNAME],' ',[LASTNAME]) AS [NAME], [DOCUMENT], [EMAIL] FROM [CUSTOMER] WHERE [Id] = @Id",
+               new {Id = id})
+               .FirstOrDefault();
+        }
+
+        public IEnumerable<ListCutomerOrderQueryResult> GetOrder(Guid id)
+        {
+                   return _context
+                   .Connection
+                   .Query<ListCutomerOrderQueryResult>("", new { Id = id} );
+      
         }
 
         public void Save(Customer customer)

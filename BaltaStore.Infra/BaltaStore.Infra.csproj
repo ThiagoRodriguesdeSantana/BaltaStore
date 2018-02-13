@@ -5,6 +5,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Scripts\Procedures\spCheckDocument.sql" />
+    <None Remove="Scripts\Procedures\spCheckEmail.sql" />
+    <None Remove="Scripts\Procedures\spCreateAddress.sql" />
+    <None Remove="Scripts\Procedures\spCreateCustomer.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Scripts\Procedures\spCheckDocument.sql" />
+    <EmbeddedResource Include="Scripts\Procedures\spCheckEmail.sql" />
+    <EmbeddedResource Include="Scripts\Procedures\spCreateAddress.sql" />
+    <EmbeddedResource Include="Scripts\Procedures\spCreateCustomer.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Scripts\Views\" />
     <Folder Include="StoreContext\Repositories\" />
   </ItemGroup>

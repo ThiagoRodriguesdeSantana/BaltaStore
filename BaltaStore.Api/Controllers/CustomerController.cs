@@ -1,7 +1,11 @@
 using System;
 using System.Collections.Generic;
 using BaltaStore.Domain.StoreContext.Commands.CustomerCommand.Input;
+using BaltaStore.Domain.StoreContext.Commands.CustomerCommand.Outouts;
 using BaltaStore.Domain.StoreContext.Entities;
+using BaltaStore.Domain.StoreContext.Handlers;
+using BaltaStore.Domain.StoreContext.Queries;
+using BaltaStore.Domain.StoreContext.Repositories;
 using BaltaStore.Domain.StoreContext.ValueObjects;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,62 +13,49 @@ namespace BaltaStore.Api.Controllers
 {
     public class CustomerController : Controller
     {
-        //O controller manipula as requisições que vem do usuario
+        private readonly ICustomerRepository _repository;
+        private readonly CustomerHandler _customerHandler;
+
+        public CustomerController(ICustomerRepository repository
+                                        , CustomerHandler customerHandler)
+        {
+            _repository = repository;
+            _customerHandler = customerHandler;
+        }
         [HttpGet]
         [Route("customers")]
-        public List<Customer> Get()
+        public IEnumerable<ListCustomerQueryResult> Get()
         {
-            var name = new Name("Thiago", "Rodrigues");
-            var document = new Document("02165072190");
-            var email = new Email("thiagorodriguescamara@gmail.com");
-            var customer = new Customer(name, document, email, "9999999");
-            var customers = new List<Customer>();
-
-            customers.Add(customer);
-
-            return customers;
+            return _repository.Get();
         }
 
         [HttpGet]
         [Route("customers/{id}")]
-        public Customer GetById(Guid id)
+        //Location = ResponseCacheLocation.Client Armazena o cache na maquina do cliente
+        //[ResponseCache(Location = ResponseCacheLocation.Client,Duration = 60)] 
+        //Cache-Control: public, max-age=60
+        public GetCustomerQueryResult GetById(Guid id)
         {
-            var name = new Name("Thiago", "Rodrigues");
-            var document = new Document("02165072190");
-            var email = new Email("thiagorodriguescamara@gmail.com");
-            return new Customer(name, document, email, "9999999");
+            return _repository.Get(id);
         }
 
         [HttpGet]
         [Route("customers/{id}/orders")]
-        public List<Order> GetOrders(Guid id)
+        public IEnumerable<ListCutomerOrderQueryResult> GetOrders(Guid id)
         {
-            var name = new Name("Thiago", "Rodrigues");
-            var document = new Document("02165072190");
-            var email = new Email("thiagorodriguescamara@gmail.com");
-            var customer = new Customer(name, document, email, "9999999");
-            var order = new Order(customer);
-
-            var MOUSE = new Product("Mouse", "Mouse", "mouse.jpg", 99M, 10);
-            var MONITOR = new Product("Monitor", "Monitor", "monitor.jpg", 99M, 10);
-
-            order.AddItem(MONITOR, 5);
-            order.AddItem(MONITOR, 5);
-            var orders = new List<Order>();
-            orders.Add(order);
-
-            return orders;
+            return _repository.GetOrder(id);
         }
 
         [HttpPost]
         [Route("customers")]
-        public Customer Post([FromBody]CreateCustomerCommand customerCommand)
+        public object Post([FromBody]CreateCustomerCommand customerCommand)
         {
-            var name = new Name(customerCommand.FirstName, customerCommand.LestName);
-            var document = new Document(customerCommand.Document);
-            var email = new Email(customerCommand.Email);
-            var customer = new Customer(name, document, email, customerCommand.Phone);
-            return customer;
+            var result = (CreatCustomerCommandResult)_customerHandler.Handle(customerCommand);
+
+            if (_customerHandler.Invalid)
+                return BadRequest(_customerHandler.Notifications);
+
+            return result;
         }
 
         [HttpPut]
@@ -81,7 +72,7 @@ namespace BaltaStore.Api.Controllers
         [Route("customers/{id}")]
         public object Delete()
         {
-           return new {Message = "Cliente Removido com sucesso!"};
+            return new { Message = "Cliente Removido com sucesso!" };
         }
 
     }

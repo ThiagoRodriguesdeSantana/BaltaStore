@@ -6,6 +6,6 @@ namespace BaltaStore.Shared
 {
     public static class Settings
     {
-        public static string ConnectionString = @"Server=.\sqlexpress; Database=baltastore; User ID=sa;Password=sap@1234";
+        public static string ConnectionString = @"Server = localhost; Database=baltastore; User Id = sa; password= sap@1234";
     }
 }

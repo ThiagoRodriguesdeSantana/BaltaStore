@@ -11,5 +11,13 @@ namespace BaltaStore.Api.Controllers
         {
             return "Hello World";
         }
+
+        [HttpGet]
+        [Route("")]
+        public string Error()
+        {
+            throw new System.Exception("Houve algum erro");
+            return "Erro";
+        }
     }
 }
